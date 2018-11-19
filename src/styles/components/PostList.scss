@@ -1,0 +1,36 @@
+table {
+    border:1px solid $secundary-gray;
+    width:100%;
+    border-spacing: 1;
+    border-collapse: collapse;
+
+    & th {
+        background-color: $third-gray;
+        padding:4px;
+        color: white;
+    }
+
+    & tr:nth-child(odd) {
+        background-color: $primary-gray;
+    }
+
+    & tr:nth-child(even) {
+        background-color: $secundary-gray;
+    }
+
+    & tr:hover {
+        background-color: $third-gray;
+        color: white;
+
+        & td {
+            color: white;
+        }
+    }
+
+
+    & td {
+        padding:5px;
+        color: $forth-gray;
+    }
+} 
+
