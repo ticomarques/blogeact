@@ -1,4 +1,4 @@
-Challenge of React Course - Blog using React
+Exercise of React Course - Blog using React
 
 This project was created based in a react course exercise, and a lot of features were improved.
 
