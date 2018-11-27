@@ -13,14 +13,39 @@
     height: 100vh;
 
 }
+.info.loginContent {
+    height: 100%;
+    min-height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
 .info {
     width:40%;
     background-color: #626262;
     float: left;
     height: 100vh;
+
+    & .wrapForm {
+        width: 50%;
+        margin:0 auto;
+    }
+
+    & a,
+    & a:link {
+        display: inline-block;
+        color:white;
+        margin:10px 0 0;
+    }
+    & a:hover {
+        text-decoration: none;
+    }
 }
 .loginForm {
-    width: 50%;
+    
 
     & input {
         width: 100%;
