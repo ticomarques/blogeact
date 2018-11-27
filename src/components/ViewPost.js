@@ -6,8 +6,10 @@ import BlogMenu from './BlogMenu';
 const ViewPost = (props) => (
     <div className="blog">
         <aside className="aside">
-            <h1>Blogeact</h1>
-            <BlogMenu />
+            <div className="wrapMenu">
+                <h1>Blogeact</h1>
+                <BlogMenu />
+            </div>
         </aside>
         <main className="posts viewPost">
             <h4><Link to="/">Home</Link> > {props.post.title} </h4>

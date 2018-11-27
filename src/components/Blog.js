@@ -7,9 +7,10 @@ import selectPosts from '../selectors/posts';
 const Blog = (props) => (
     <div className="blog">
         <aside className="aside">
-            <h1>Blogeact</h1>
-            <BlogMenu />
-            
+            <div className="wrapMenu">
+                <h1>Blogeact</h1>
+                <BlogMenu />
+            </div>
         </aside>
         <main className="posts">
             {props.posts.map((post) => {

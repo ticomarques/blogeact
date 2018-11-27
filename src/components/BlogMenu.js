@@ -10,7 +10,7 @@ const BlogMenu = () => (
             <li><a href="#">Yarn</a></li>
             <li><a href="#">SASS/SCSS</a></li>
 
-            <li><Link to="/admin" className="admin">Admin</Link></li>
+            <li><Link to="/login" className="admin">Admin</Link></li>
         </ul>
     </nav>
 );

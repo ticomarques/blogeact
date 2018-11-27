@@ -18,6 +18,7 @@ const Login = (props) => (
                 </form>
 
                 <Link to="#forgotpass">Forgot your password ?</Link> <Link to="#forgotemail">or email ?</Link><br></br><Link to="#signin">Sign in</Link>
+                <p>Login: Admin / Pass: admin</p>
             </div>
         </div>
     </div>
