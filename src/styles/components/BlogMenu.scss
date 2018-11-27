@@ -1,0 +1,14 @@
+nav {
+    & ul {
+
+        & li {
+
+            & a {
+                color:$third-gray;
+                &.admin{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

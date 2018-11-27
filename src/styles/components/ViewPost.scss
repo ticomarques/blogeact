@@ -1,0 +1,19 @@
+.viewPost {
+    & h1 {
+        margin-bottom: 0;
+        color:white;
+    }
+    & h4 {
+        color:white;
+        margin: 0;
+    }
+    & a {
+        color: white;
+    }
+    & small {
+        color: white;
+    }
+    & p {
+        color: $fifth-gray;
+    }
+}

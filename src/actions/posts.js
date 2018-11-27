@@ -5,11 +5,11 @@ Em cada acao ficam objetos planos, dos valores que serão enviados via parametro
 
 No componente tem o dispatch :
 
-dispatch(removeExpense({ id: props.expense.id }));
+dispatch(removePost({ id: props.post.id }));
 
-A funcao removeExpense, mora aqui no arquivo de actions, ele contém :
+A funcao removePost, mora aqui no arquivo de actions, ele contém :
 
-1- a funcao removeExpense()
+1- a funcao removePost()
 2- o parametro passado para funcao ({id} = {}), onde {id} = {} significa se não enviar valor 
 para o parametro id o valor default é {} objeto vazio
 3- dentro da funcao tempos o type, que vai servir para linkar a funcao action com o reducer
@@ -21,7 +21,7 @@ Actions é tipo local que o dispatch manda a informacao primeiro via paramtro, d
 
 import uuid from 'uuid';
 
-// ACTION - ADD_EXPENSE
+// ACTION - ADD_POST
 export const addPost = (
   {
     title = '',
@@ -31,7 +31,7 @@ export const addPost = (
   } = {}
 ) => ({
   type: 'ADD_POST',
-  expense: {
+  post: {
     id: uuid(),
     title,
     category,
@@ -50,4 +50,3 @@ export const editPost = (id, updates) => ({
   id,
   updates
 });
-

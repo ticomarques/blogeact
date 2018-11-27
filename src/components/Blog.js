@@ -1,23 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import BlogListItem from './BlogListItem';
+import BlogMenu from './BlogMenu';
+import selectPosts from '../selectors/posts';
 
-const Blog = () => (
+const Blog = (props) => (
     <div className="blog">
         <aside className="aside">
             <h1>Blogeact</h1>
-            <nav>
-            <ul>
-                <li><a href="#">JS</a></li>
-                <li><a href="#">React</a></li>
-                <li><a href="#">Webpack</a></li>
-                <li><a href="#">Yarn</a></li>
-                <li><a href="#">SASS/SCSS</a></li>
-            </ul>
-            </nav>
+            <BlogMenu />
+            
         </aside>
         <main className="posts">
-            <h1>Coluna 2</h1>
+            {props.posts.map((post) => {
+                return <BlogListItem key={post.id} {...post} />;
+              })}
         </main>
     </div>
 );
 
-export default Blog;
+const mapStateToProps = (state) => {
+    return {
+      posts: selectPosts(state.posts)
+    };
+  };
+  
+export default connect(mapStateToProps)(Blog);

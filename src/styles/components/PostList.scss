@@ -24,6 +24,9 @@ table {
 
         & td {
             color: white;
+            & a {
+                color: white;
+            }
         }
     }
 
@@ -31,6 +34,14 @@ table {
     & td {
         padding:5px;
         color: $forth-gray;
+
+        &.actions {
+            text-align: center;
+        }
+
+        & a {
+            color:$third-gray;
+        }
     }
 } 
 

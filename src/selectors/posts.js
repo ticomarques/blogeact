@@ -1,9 +1,9 @@
-// Get visible expenses
+// Get visible POSTS
 
-export default (posts, { category, title}) => {
+export default (posts, filters) => {
   return posts.filter((post) => {
-    const textMatch = post.title.toLowerCase().includes(title.toLowerCase());
-    const categoryMatch = post.category.toLowerCase().includes(category.toLowerCase());
+    const textMatch = post.title.toLowerCase();
+    const categoryMatch = post.category.toLowerCase();
 
     return textMatch && categoryMatch;
   });

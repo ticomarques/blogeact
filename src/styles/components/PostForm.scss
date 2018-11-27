@@ -1,0 +1,23 @@
+.PostForm {
+    width:20%;
+
+    & input, & textarea {
+        display: inline-block;
+        margin:5px 0;
+        width:100%;
+    } 
+
+    & button {
+        width: 100%;
+        padding:8px 0;
+
+        &:hover {
+            box-shadow: 5px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        }
+        &:hover::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+}

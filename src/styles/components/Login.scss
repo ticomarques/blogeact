@@ -19,3 +19,17 @@
     float: left;
     height: 100vh;
 }
+.loginForm {
+    width: 50%;
+
+    & input {
+        width: 100%;
+        margin: $s-size auto;
+        display: block;
+    }
+
+    & button {
+        display: inline-block;
+        width:100%;
+    }
+}

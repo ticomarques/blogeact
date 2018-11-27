@@ -17,4 +17,24 @@
     background-color: #626262;
     float: left;
     height: 100vh;
+    margin-top:30px;
+}
+.box-post {
+    width:50%;
+    float:left;
+    margin: 0 0 30px;
+
+    & h3 {
+        margin: 5px 0 0;
+
+        & a {
+            color:white;
+        }
+    }
+    & small {
+        color: white;
+    }
+    & p {
+        color: $fifth-gray;
+    }
 }

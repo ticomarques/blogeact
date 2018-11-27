@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import Header from './Header';
+import PostListItem from './PostListItem';
+import selectPosts from '../selectors/posts';
 
-const PostList = () => (
+const PostList = (props) => (
     <div>
         <Header />
         <Link to="/create">New Post</Link>
@@ -15,21 +18,18 @@ const PostList = () => (
             </thead>
 
             <tbody>
-                <tr>
-                    <td>How to use map, filter, reduce, sort</td>
-                    <td><Link to="/edit/123">Edit</Link> | Delete | <Link to="/post/123">View</Link></td>
-                </tr>
-                <tr>
-                    <td>How to use map, filter, reduce, sort</td>
-                    <td><Link to="/edit/123">Edit</Link> | Delete | <Link to="/post/123">View</Link></td>
-                </tr>
-                <tr>
-                    <td>How to use map, filter, reduce, sort</td>
-                    <td><Link to="/edit/123">Edit</Link> | Delete | <Link to="/post/123">View</Link></td>
-                </tr>
+                {props.posts.map((post) => {
+                    return <PostListItem key={post.id} {...post} />;
+                  })}
             </tbody>
         </table>
     </div>
 );
 
-export default PostList;
+const mapStateToProps = (state) => {
+  return {
+    posts: selectPosts(state.posts)
+  };
+};
+
+export default connect(mapStateToProps)(PostList);
