@@ -6,6 +6,7 @@ import Login from '../components/Login';
 import AdminDashboard from '../components/AdminDashboard';
 import AddPostPage from '../components/AddPostPage';
 import EditPostPage from '../components/EditPostPage';
+import NotFoundPage from '../components/NotFoundPage';
   import Blog from '../components/Blog';
   import ViewPost from '../components/ViewPost';
 
@@ -19,6 +20,7 @@ const AppRouter = () => (
         <Route path="/edit/:id" component={EditPostPage} />
           <Route path="/" component={Blog} exact={true} />
           <Route path="/post/:id" component={ViewPost} />
+          <Route component={NotFoundPage} />
       </Switch>
     </div>
   </BrowserRouter>
