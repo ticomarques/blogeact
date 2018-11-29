@@ -22,7 +22,7 @@ const Blog = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-      posts: selectPosts(state.posts)
+      posts: selectPosts(state.posts, state.filters)
     };
   };
   
